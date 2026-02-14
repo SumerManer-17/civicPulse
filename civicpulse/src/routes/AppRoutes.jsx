@@ -1,3 +1,19 @@
-import Login from "../pages/auth/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-<Route path="/login" element={<Login />} />
+import Register from "../pages/auth/Register";
+import Login from "../pages/auth/Login";
+import Home from "../pages/public/Home"
+
+const AppRoutes = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path = "/" element = {<Home/>} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default AppRoutes;
